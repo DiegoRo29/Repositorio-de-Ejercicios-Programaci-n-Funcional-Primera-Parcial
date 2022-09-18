@@ -1,49 +1,108 @@
-# # """ Hacer una funcion que reciba dos argumentos de tipo string, el primero que sea un mensaje de saludo, y el segundo
-# # el primer nombre de una persona. y diga: <saludo> <persona>
-# # """
-# def mensaje(msg:str):
-#     print("Dentro de la función",msg,id(msg))
+# un array solamente puede tener tipos de datos del mismo, un array dinamico significa que puede 
+# crecer, una lista sin elementos es una lista vacia */
+# Las listas tienen funciones, unas de las mas usadas es len
+# los parentesis son tuplas, las llaves son conjuntos, los corchetes son listas
+# todas las listas empiezan en 0
+# Como no es inclusive se toma en cuenta el numero anterior
+# Reverse Imprime la lista al revés
 #
-# def saludo(msg:str, nombre:str):
-#     print(msg, nombre)
-#
-# if __name__ == "__main__":
-#     saludo("Buenos días", "Alex")
-#     salud()
-# """
-# Función que calcula la edad de una persona dado el año de nacimiento, el mensaje de salida debe ser:
-# "Hola <nombre>, tienes <n> años"
-# """
-def saludo(msg:str, nombre:str):
-     print(msg, nombre)
 
-def saludo_edad(nombre:str, a_nacimiento:int):
-    edad = 2022-a_nacimiento
-    print("Hola",nombre, "tienes", edad, "años")
-
-def calcular_edad(a_actual:int, a_nacimiento:int)->int:
-    return a_actual-a_nacimiento
+from audioop import reverse
+from re import M
 
 
-def saludo(nombre:str, edad:int):
-    print("Hola",nombre,"tienes", edad, "años")
+mi_lista = [1,2,3,4]
+print()      
+lista_vacia = []
+print(lista_vacia)
 
-if __name__ == "__main__":
-    saludo("Alex", calcular_edad(2022,2003))
+mi_lista2 =[1, "hola", True, 3.14, [1,2,3], (1,2,3), {4,5,6}]
+print(mi_lista2)
 
-    edad = calcular_edad(2022,2003)
-    saludo("Fer", edad)
+print(len(mi_lista2))
+print(f"Mi lista: {mi_lista}")
 
-    # print(calcular_edad(2022,1971))
+print(f"No de elementos: {len(mi_lista)}")
+print(f"Primer elemento: {mi_lista[-1]},{mi_lista[-2]},{mi_lista[-3]},{mi_lista[-4]}")
 
-    # saludo("Buenos días", "Alex")
-    # saludo_edad("Alex",1971)
+print(mi_lista[0:-1])
+print(mi_lista[0:3])
+print(mi_lista[0:])
+print(mi_lista[:])
 
-"""
-Hacer una función que reciba dos números y retorne la suma del cuadrado de los números usando además una
-función que haga el proceso del cuadrado
-"""
-def cuad(n:int)->int:
-    return n*n
-def suma(a:int, b:int)->int:
-    return a+b
+# modificar elementos de la lista
+
+mi_lista[2]= "tres"
+print(mi_lista)
+
+# Insertar la lista [5,"seis",7,8] al final de la lista mi_lista
+#Todos los elementos a partir de aqui, me pone esto
+mi_lista[len(mi_lista):] = [5,"seis",7,8] 
+print(mi_lista)
+#slices (rebanadas)
+
+mi_lista = [1,2,3,4]
+mi_lista.append("cinco")
+print(mi_lista)
+
+ml = []
+for i in range(1,5):
+    ml.append(i)
+print(ml)
+
+#ml.append([6,7,8])
+#print(ml)
+ml.extend([6,7,8,9,8,5])
+print(ml)
+#insertar un elemento en la posicion 1,2,3,4
+ml.insert(4,"5")
+print(ml)
+
+# del ml[5]
+print(ml)
+
+ml.remove(8)
+print(ml)
+
+ml.remove
+print(ml)
+
+ml.reverse()
+print(ml)
+
+l1 = [1,2,3,4,5,6,7,8,9,10]
+l2 = l1[:]
+print(l1)
+l1.reverse()
+print(id(l1))
+print(id(l2))
+
+ld = [[5,4,6],[7,8,2],[1,3,4,5],[6,7]]
+print(f"Desordenado: {ld}")
+ld.sort()
+print(f"Ordenado: {ld}")
+ld = [5,4,6,7,8,2,1,3,4,5,6,7]
+s1 = sorted(ld)
+print(s1)
+s2 = sorted(ld,reverse=True)  #Iterable es una coleccion o estructura de datos que tiene varios caracteres que se pueden recorrer
+print(s2)
+ld
+
+ceros = [0,0,0,0,0,0,0,0,0,0]
+print(ceros)
+ceros = [[0]*9]*9
+print(ceros)
+
+valor_max = max(ld)
+print(valor_max)
+
+valor_min = min(ld)
+print(valor_min)
+cuatros = ld.count(4)
+print(cuatros)
+repetidos = []
+print("----------------")
+for i in range(1,9):
+    repetidos.append (ld.count(i))
+
+print(repetidos)
