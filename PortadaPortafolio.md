@@ -1,4 +1,4 @@
-https://portal.ucol.mx/content/micrositios/188/image/Escudo2021/1_Linea/UdeC%20Abajo_Negro.png
+![image](https://user-images.githubusercontent.com/111618195/190942117-00865f86-0633-4706-8207-801d0143db54.png)
 # Universidad de Colima
 # Campos Coquimatlan
 # Facultad de Ingeniería Mecánica y Eléctrica (FIME)
